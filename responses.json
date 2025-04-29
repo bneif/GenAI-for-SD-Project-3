@@ -1,0 +1,104 @@
+{
+    "tasks": [
+      {
+        "task": "Code Summarization (Java)",
+        "zero_shot": "Summarize in a few sentences the functionality of the following Java method.\n```java\npublic Map<String, Integer> countWordFrequency(List<String> words) {\n    Map<String, Integer> freqMap = new HashMap<>();\n    for (String word : words) {\n        freqMap.put(word, freqMap.getOrDefault(word, 0) + 1);\n    }\n    return freqMap;\n}\n```",
+        "chain_of_thought": "Summarize in a few sentences the functionality of the following Java method. Explain your reasoning in a logical progression of steps.\n```java\npublic Map<String, Integer> countWordFrequency(List<String> words) {\n    Map<String, Integer> freqMap = new HashMap<>();\n    for (String word : words) {\n        freqMap.put(word, freqMap.getOrDefault(word, 0) + 1);\n    }\n    return freqMap;\n}\n```"
+      },
+      {
+        "task": "Bug Fixing (Python)",
+        "zero_shot": "Identify and fix the off-by-one error in the following Python function.\n```python\ndef sum_range(start, end):\n    total = 0\n    for i in range(start, end):\n        total += i\n    return total\n```",
+        "chain_of_thought": "Identify and fix the off-by-one error in the following Python function. Explain your reasoning in a logical progression of steps.\n```python\ndef sum_range(start, end):\n    total = 0\n    for i in range(start, end):\n        total += i\n    return total\n```"
+      },
+      {
+        "task": "Bug Classification (C++)",
+        "zero_shot": "Classify the type of bug present in the following function.\n```cpp\nint* getArray(int size) {\n    int arr[size];  // Warning: local array\n    return arr;     // Bug: returning pointer to local variable\n}\n```",
+        "chain_of_thought": "Classify the type of bug present in the following function. Explain your reasoning in a logical progression of steps.\n```cpp\nint* getArray(int size) {\n    int arr[size];  // Warning: local array\n    return arr;     // Bug: returning pointer to local variable\n}\n```"
+      },
+      {
+        "task": "Generating Email Validators (Python + Regex)",
+        "zero_shot": "Complete with regex the following function, which will validate email addresses.\n```python\ndef is_valid_email(email):\n    # TODO: Complete using regex\n    pass\n```",
+        "chain_of_thought": "Complete with regex the following function, which will validate email addresses. Explain your reasoning in a logical progression of steps.\n```python\ndef is_valid_email(email):\n    # TODO: Complete using regex\n    pass\n```"
+      },
+      {
+        "task": "Generating Flask API’s (Python)",
+        "zero_shot": "Create a ‘/greet/‘ endpoint API in Python that returns a JSON greeting by completing the following function.\n```python\nfrom flask import Flask, jsonify\napp = Flask(__name__)\n@app.route('/greet/<username>')\ndef greet(username):\n    # TODO: Return a JSON greeting\n    pass\n```",
+        "chain_of_thought": "Create a ‘/greet/‘ endpoint API in Python that returns a JSON greeting by completing the following function. Explain your reasoning in a logical progression of steps.\n```python\nfrom flask import Flask, jsonify\napp = Flask(__name__)\n@app.route('/greet/<username>')\ndef greet(username):\n    # TODO: Return a JSON greeting\n    pass\n```"
+      },
+      {
+        "task": "SQL Schema Design (SQL)",
+        "zero_shot": "Write the schema for an app that allows users to review books that would naturally follow the included comments below.\n```sql\n-- TODO: Design schema with appropriate keys and constraints\n-- Tables: users(id, name), books(id, title), reviews(id, user_id, book_id, rating)\n```",
+        "chain_of_thought": "Write the schema for an app that allows users to review books that would naturally follow the included comments below. Explain your reasoning in a logical progression of steps.\n```sql\n-- TODO: Design schema with appropriate keys and constraints\n-- Tables: users(id, name), books(id, title), reviews(id, user_id, book_id, rating)\n```"
+      },
+      {
+        "task": "Null Dereference Detection (Java)",
+        "zero_shot": "Identify any null dereference risk by filling out the following Java skeleton.\n```java\npublic int getLength(String s) {\n    return s.length();  // What if s is null?\n}\n```",
+        "chain_of_thought": "Identify any null dereference risk by filling out the following Java skeleton. Explain your reasoning in a logical progression of steps.\n```java\npublic int getLength(String s) {\n    return s.length();  // What if s is null?\n}\n```"
+      },
+      {
+        "task": "CSV Parser Variants (Python)",
+        "zero_shot": "Improve the parser based on the following Python skeleton in order to support quoted fields.\n```python\ndef parse_csv_line(line):\n    return line.split(',')  # Incomplete: doesn’t handle quoted fields\n```",
+        "chain_of_thought": "Improve the parser based on the following Python skeleton in order to support quoted fields. Explain your reasoning in a logical progression of steps.\n```python\ndef parse_csv_line(line):\n    return line.split(',')  # Incomplete: doesn’t handle quoted fields\n```"
+      },
+      {
+        "task": "Data Class to API Conversion (Kotlin)",
+        "zero_shot": "Convert the Kotlin data class below to a REST API using Ktor.\n```kotlin\ndata class Product(val id: Int, val name: String, val price: Double)\n```",
+        "chain_of_thought": "Convert the Kotlin data class below to a REST API using Ktor. Explain your reasoning in a logical progression of steps.\n```kotlin\ndata class Product(val id: Int, val name: String, val price: Double)\n```"
+      },
+      {
+        "task": "Function Summarization (Python)",
+        "zero_shot": "Summarize in a few sentences the functionality of the following Python method.\n```python\ndef reverse_words(sentence):\n    return ' '.join(sentence.split()[::-1])\n```",
+        "chain_of_thought": "Summarize in a few sentences the functionality of the following Python method. Explain your reasoning in a logical progression of steps.\n```python\ndef reverse_words(sentence):\n    return ' '.join(sentence.split()[::-1])\n```"
+      },
+      {
+        "task": "Write Prompt for AI (Generic)",
+        "zero_shot": "Write a prompt that an AI model like yourself could use to generate the code below.\n```python\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n```",
+        "chain_of_thought": "Write a prompt that an AI model like yourself could use to generate the code below. Explain your reasoning in a logical progression of steps.\n```python\ndef fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n-1) + fibonacci(n-2)\n```"
+      },
+      {
+        "task": "Bug Fixing (Python)",
+        "zero_shot": "Fix the bug in the following Python code for the factorial function that happens when the input is 0.\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)\n```",
+        "chain_of_thought": "Fix the bug in the following Python code for the factorial function that happens when the input is 0. Explain your reasoning in a logical progression of steps.\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)\n```"
+      },
+      {
+        "task": "Implement Delete Method (C)",
+        "zero_shot": "Implement in C using the following skeleton a method to delete nodes in a linked list.\n```c\nstruct Node {\n    int data;\n    struct Node* next;\n};\nvoid delete_node(struct Node* head, int value) {\n    // TODO: Implement deletion\n}\n```",
+        "chain_of_thought": "Implement in C using the following skeleton a method to delete nodes in a linked list. Explain your reasoning in a logical progression of steps.\n```c\nstruct Node {\n    int data;\n    struct Node* next;\n};\nvoid delete_node(struct Node* head, int value) {\n    // TODO: Implement deletion\n}\n```"
+      },
+      {
+        "task": "Complete Python Fibonacci Method (Python)",
+        "zero_shot": "Complete the following empty Python method that implements Fibonacci numbers recursively.\n```python\ndef fibonacci(n):\n    # TODO: Implement recursive Fibonacci\n    pass\n```",
+        "chain_of_thought": "Complete the following empty Python method that implements Fibonacci numbers recursively. Explain your reasoning in a logical progression of steps.\n```python\ndef fibonacci(n):\n    # TODO: Implement recursive Fibonacci\n    pass\n```"
+      },
+      {
+        "task": "Class Constructor Completion (Python)",
+        "zero_shot": "Complete the following empty Python class constructor given below.\n```python\nclass Person:\n    def __init__(self, name, age):\n        # TODO: Complete constructor\n        pass\n```",
+        "chain_of_thought": "Complete the following empty Python class constructor given below. Explain your reasoning in a logical progression of steps.\n```python\nclass Person:\n    def __init__(self, name, age):\n        # TODO: Complete constructor\n        pass\n```"
+      },
+      {
+        "task": "Java Binary Search Completion (Java)",
+        "zero_shot": "Complete the following partial Java implementation of binary search.\n```java\npublic int binarySearch(int[] arr, int target) {\n    int low = 0;\n    int high = arr.length - 1;\n    // TODO: Implement binary search\n}\n```",
+        "chain_of_thought": "Complete the following partial Java implementation of binary search. Explain your reasoning in a logical progression of steps.\n```java\npublic int binarySearch(int[] arr, int target) {\n    int low = 0;\n    int high = arr.length - 1;\n    // TODO: Implement binary search\n}\n```"
+      },
+      {
+        "task": "Bug Fixing (C++)",
+        "zero_shot": "Resolve inconsistency between the name and the logic of the following C++ function.\n```cpp\nint calculateArea(int radius) {\n    return 2 * 3.14 * radius * radius;\n}\n```",
+        "chain_of_thought": "Resolve inconsistency between the name and the logic of the following C++ function. Explain your reasoning in a logical progression of steps.\n```cpp\nint calculateArea(int radius) {\n    return 2 * 3.14 * radius * radius;\n}\n```"
+      },
+      {
+        "task": "JavaScript Bug Identification and Fixing (JavaScript)",
+        "zero_shot": "First identify the bug in the following JavaScript code. Then fix it.\n```javascript\nfunction isEven(n) {\n    if (n % 2 = 0) {\n        return true;\n    }\n    return false;\n}\n```",
+        "chain_of_thought": "First identify the bug in the following JavaScript code. Then fix it. Explain your reasoning in a logical progression of steps.\n```javascript\nfunction isEven(n) {\n    if (n % 2 = 0) {\n        return true;\n    }\n    return false;\n}\n```"
+      },
+      {
+        "task": "C++ Code Decomposition (C++)",
+        "zero_shot": "Decompose the high-level content/summary of the following C++ code into logical steps.\n```cpp\nint factorial(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\n```",
+        "chain_of_thought": "Decompose the high-level content/summary of the following C++ code into logical steps. Explain your reasoning in a logical progression of steps.\n```cpp\nint factorial(int n) {\n    if (n == 0) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\n```"
+      },
+      {
+        "task": "Python Method Completion (Intent) (Python)",
+        "zero_shot": "Complete the following skeleton for a Python method based on the intent of the function.\n```python\ndef greet_user(username):\n    # TODO: Complete based on intended behavior\n    pass\n```",
+        "chain_of_thought": "Complete the following skeleton for a Python method based on the intent of the function. Explain your reasoning in a logical progression of steps.\n```python\ndef greet_user(username):\n    # TODO: Complete based on intended behavior\n    pass\n```"
+      }
+    ]
+  }
